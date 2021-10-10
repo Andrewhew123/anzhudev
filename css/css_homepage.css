@@ -1,0 +1,296 @@
+@font-face{
+
+	/*font type 1*/
+	font-family: 'Architects Daughter';
+	src: url('font/ArchitectsDaughter-Regular.ttf');
+
+}
+
+/*--------------- Keyframes Animation ---------------*/
+@keyframes fadeLeft{
+	0%{opacity: 0; transform: translateX(-100px);}
+	100%{opacity: 1; transform: translateX(0);}
+
+}
+
+@keyframes fadeRight{
+	0%{opacity: 0; transform: translateX(100px);}
+	100%{opacity: 1; transform: translateX(0);}
+
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+
+/*--------------- Banner ---------------*/
+
+.nav{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	height: 40px;
+	background-color: #2EBDF3;
+	justify-content: center;
+}
+
+.nav a{
+	text-decoration: none;
+	color: white;
+	font-family: Architects Daughter;
+	padding-right: 30px;
+	font-size: 25px;
+	text-align: center;
+}
+
+
+.banner{
+	background-image: linear-gradient(#2EBDF3, #D8F6FF);
+	width: 100%;
+	height: 450px;
+	padding: 20px 20px 0px 20px;
+}
+
+.banner-img{
+	width: 300px;
+	height: 420px;
+	animation-name: fadeRight;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	opacity: 1;
+}
+
+.col-banner-details{
+	display: flex;
+	animation-name: fadeLeft;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	opacity: 1;
+}
+
+.banner-details{
+	margin: auto;
+}
+
+.banner h1{
+	font-family: Architects Daughter;
+	font-weight: bold;
+}
+
+.banner p{
+	font-family: Architects Daughter;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.col-banner-img{
+	text-align: center;
+}
+
+.wooden-img{
+	margin-top: -100px;
+	height: 150px;
+}
+
+/*--------------- Portfolio ---------------*/
+.title-portfolio{
+	padding-top: 20px;
+}
+
+.big-container-portfolio{
+	background-image: url('../images/jungle.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.container-portfolio{
+	padding-top: 30px;
+	
+}
+
+
+.container-portfolio h1{
+	font-family: Architects Daughter;
+	font-weight: bold;
+	color: white;
+}
+
+.container-portfolio h2{
+	font-family: Architects Daughter;
+	font-weight: bold;
+	color: white;
+}
+
+.container-portfolio p{
+	font-family: Architects Daughter;
+	font-size: 20px;
+	color: white;
+}
+
+.container-portfolio img{
+	width: 100%;
+	border-radius: 15px 15px 15px 15px;
+}
+
+.row-portfolio{
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+
+.col-portfolio-detail{
+	display: flex;
+	padding-top: 20px;
+	opacity: 0;
+}
+
+.portfolio-detail{
+	margin: auto;
+}
+
+.col-portfolio-image{
+	opacity: 0;
+}
+
+.col-portfolio-detail.active{
+	animation-name: fadeRight;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	opacity: 1;
+}
+
+
+.col-portfolio-image.active{
+	animation-name: fadeLeft;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+	opacity: 1;
+}
+
+
+
+/* --------------- Scroll to Top ------------------- */
+.scroll-to-top{
+	background-color: white;
+	position: fixed;
+	bottom: 16px;
+	right: 32px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 32px;
+	color: #0E437E;
+	text-decoration: none;
+	opacity: 0;
+	pointer-events: none;
+	transition: all .4s;
+	z-index: 99;
+}
+
+.scroll-to-top:hover{
+	background-color: #0E437E;
+	color: white;
+	text-decoration: none;
+}
+
+.scroll-to-top.active{
+    bottom: 32px;
+	pointer-events: auto;
+	opacity: 1;
+}
+
+/* --------------- Footer ------------------- */
+.box-footer {
+  padding:40px 0;
+  background-color: black;
+  color:#4b4c4d;
+  text-align: center;
+}
+
+.footer{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.footer-desc{
+	color: white;
+}
+
+.box-footer .social {
+  text-align:center;
+  padding-bottom:15px;
+  padding-top: 15px;
+
+}
+
+.box-footer .social > a {
+  font-size:30px;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:white;
+  line-height:10px;
+  display:inline-block;
+  text-align:center;
+  opacity:0.75;
+  padding-top: 5px;
+}
+
+.box-footer .social > a:hover {
+  opacity:0.9;
+  color: white;
+}
+
+.box-footer .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+
+
+
+
+/*--------------- Responsive ---------------*/
+
+/*Tablet*/
+@media only screen and (max-width: 768px){
+
+	/*--------------- Banner ---------------*/
+	.banner-img{
+		width: 280px;
+		height: 350px;
+	}
+
+	/*--------------- Portfolio ---------------*/
+
+}
+
+/*Mobile*/
+@media only screen and (max-width: 400px){
+
+	/*--------------- Banner ---------------*/
+	.nav a{
+		font-size: 15px;
+	}
+
+	.banner p{
+		font-size: 12px;
+	}
+	.banner-img{
+		width: 150px;
+		height: 190px;
+	}
+
+	/*--------------- Portfolio ---------------*/
+	.container-portfolio p{
+		font-size: 15px;
+	}
+}

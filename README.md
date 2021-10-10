@@ -1,2 +1,2 @@
 # anzhudev
-This is my personal website project.
+This is my personal website.
