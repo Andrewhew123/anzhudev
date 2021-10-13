@@ -93,44 +93,54 @@ html{
 }
 
 /*--------------- Portfolio ---------------*/
+.table-project tr{
+	color: white;
+	cursor: pointer;
+	border-radius: 1em;
+}
+
+.table-project th{
+	background-color: #6A4111;
+	transition-duration: 1s;
+	font-family: Architects Daughter;
+	font-weight: bold;
+}
+.table-project th:hover{
+	background-color: #A1641D;
+}
+
 .title-portfolio{
 	padding-top: 20px;
 }
 
 .big-container-portfolio{
-	background-image: url('../images/jungle.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: #E7CB90;
 }
-
 
 .container-portfolio{
 	padding-top: 30px;
 	
 }
 
-
 .container-portfolio h1{
 	font-family: Architects Daughter;
 	font-weight: bold;
-	color: white;
 }
 
 .container-portfolio h2{
 	font-family: Architects Daughter;
 	font-weight: bold;
-	color: white;
 }
 
 .container-portfolio p{
 	font-family: Architects Daughter;
 	font-size: 20px;
-	color: white;
 }
 
 .container-portfolio img{
 	width: 100%;
 	border-radius: 15px 15px 15px 15px;
+	border: 5px solid #6A4111;
 }
 
 .row-portfolio{
@@ -167,7 +177,25 @@ html{
 	opacity: 1;
 }
 
+#portfolio2{
+	display: none;
+}
 
+#portfolio3{
+	display: none;
+}
+
+.btn-view-portfolio{
+	background-color: #6A4111;
+	color: white;
+	transition-duration: 1s;
+	text-align: center;
+}
+
+.btn-view-portfolio:hover{
+	background-color: #A1641D;
+	color: white;
+}
 
 /* --------------- Scroll to Top ------------------- */
 .scroll-to-top{

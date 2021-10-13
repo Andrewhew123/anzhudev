@@ -1,3 +1,68 @@
+<script>
+
+function init(){
+
+	option_project();
+}
+
+
+function option_project(){
+
+	//Options
+	portfolio_option1 = document.querySelector("#portfolio_option1");
+	portfolio_option2 = document.querySelector("#portfolio_option2");
+	portfolio_option3 = document.querySelector("#portfolio_option3");
+
+	//Portfolio info
+	portfolio1 = document.querySelector("#portfolio1");
+	portfolio2 = document.querySelector("#portfolio2");
+	portfolio3 = document.querySelector("#portfolio3");
+
+	portfolio_option1.addEventListener("click", function(){
+
+		portfolio_option1.style.backgroundColor = "#A1641D";
+		portfolio_option2.style.backgroundColor = "#6A4111";
+		portfolio_option3.style.backgroundColor = "#6A4111";
+
+		portfolio1.style.display = "flex";
+		portfolio2.style.display = "none";
+		portfolio3.style.display = "none";
+
+	}, false);
+
+	portfolio_option2.addEventListener("click", function(){
+
+		portfolio_option1.style.backgroundColor = "#6A4111";
+		portfolio_option2.style.backgroundColor = "#A1641D";
+		portfolio_option3.style.backgroundColor = "#6A4111";
+
+		portfolio1.style.display = "none";
+		portfolio2.style.display = "flex";
+		portfolio3.style.display = "none";
+
+	}, false);
+
+	portfolio_option3.addEventListener("click", function(){
+
+		portfolio_option1.style.backgroundColor = "#6A4111";
+		portfolio_option2.style.backgroundColor = "#6A4111";
+		portfolio_option3.style.backgroundColor = "#A1641D";
+
+		portfolio1.style.display = "none";
+		portfolio2.style.display = "none";
+		portfolio3.style.display = "flex";
+
+	}, false);
+
+
+
+
+}
+
+window.addEventListener("load", init, false);
+
+</script>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,10 +135,23 @@
 
 <div class="container container-portfolio">
 
-	<h1 class="title-portfolio">Portfolio</h1>
+	<h1 class="title-portfolio">Projects</h1>
+
+	<br>
+
+	<!---------- Table Item Selection ---------->
+	<table class="table table-borderless table-project">
+		<thead>
+			<tr class="text-center">
+				<th scope="col" id="portfolio_option1" title="Project 1" class="align-middle">Project 1</th>
+				<th scope="col" id="portfolio_option2" title="Project 2" class="align-middle">Project 2</th>
+				<th scope="col" id="portfolio_option3" title="Project 3" class="align-middle">Project 3</th>
+			</tr>
+		</thead>
+	</table>
 
 	<!----- Portfolio 1 ----->
-	<div class="row row-portfolio">
+	<div class="row row-portfolio" id="portfolio1">
 
 		<div class="col-md-6 col-xs-12 col-portfolio-image">
 			<img src="images/awd_assignment.png">
@@ -82,14 +160,16 @@
 		<div class="col-md-6 col-xs-12 col-portfolio-detail" id="portfolio">
 			<div class="portfolio-detail">
 				<h2>Home Library Application</h2>
-				<p>Home Library Application also a platform that allow users to manage and add their favorite books into the booklist records. It is purpose for users to share what they have recently read books with friends and family.</p>
+				<hr>
+				<p>Home Library Application also a platform that allow users to manage and add their favorite books into the booklist records.</p>
+				<a class="btn btn-view-portfolio" href="https://anzhulibrary.epizy.com/" role="button" target="_blank">View</a>
 			</div>
 		</div>
 
 	</div>
 
 	<!----- Portfolio 1 ----->
-	<div class="row row-portfolio">
+	<div class="row row-portfolio" id="portfolio2"> 
 
 		<div class="col-md-6 col-xs-12 col-portfolio-image">
 			<img src="images/webcomic_assignment.png" class="">
@@ -98,14 +178,16 @@
 		<div class="col-md-6 col-xs-12 col-portfolio-detail">
 			<div class="portfolio-detail">
 				<h2>Online Web Comic</h2>
-				<p>Online Webcomic is known as online comics or Internet comics that published on a website or mobile app. The Webcomic contains genre such as romance, action, msytery and so on. This project is developed for the purpose of reading comic books through online platform.</p>
+				<hr>
+				<p>Online Webcomic is known as online comics or Internet comics that published on a website or mobile app.</p>
+				
 			</div>
 		</div>
 
 	</div>
 
 	<!----- Portfolio 1 ----->
-	<div class="row row-portfolio">
+	<div class="row row-portfolio" id="portfolio3">
 
 		<div class="col-md-6 col-xs-12 col-portfolio-image">
 			<img src="images/multimedia_assignment.png">
@@ -114,7 +196,9 @@
 		<div class="col-md-6 col-xs-12 col-portfolio-detail">
 			<div class="portfolio-detail">
 				<h2>Multimedia Application Guide</h2>
-				<p>Multimedia Application is an Application which uses a collection of multiple media sources such as text, graphics, images, sound/audio, animation and so on. This project is "League of Legends Game Guide" that purpose for gamers who love to understand further about League of Legends.</p>
+				<hr>
+				<p>Multimedia Application is an Application which uses a collection of multiple media sources such as text, graphics, images, sound/audio, animation and so on.</p>
+				<a class="btn btn-view-portfolio" href="https://andrewhew123.github.io/lol/" role="button" target="_blank">View</a>
 			</div>
 		</div>
 
@@ -122,11 +206,7 @@
 
 </div>
 
-</div>
-
-
-
-
+<br><br>
 
 <div class="box-footer">
     <footer class="footer">
